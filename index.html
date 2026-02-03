@@ -1,73 +1,110 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Selamat Hari Valentine</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Valentine 🤍</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      text-align: center;
+      color: #fff;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-weight: normal;
+      margin-top: 0;
+    }
+
+    .message {
+      background: rgba(255,255,255,0.15);
+      padding: 20px;
+      border-radius: 15px;
+      margin: 20px auto;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      max-width: 90%;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 25px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff2e55;
+    }
+  </style>
 </head>
+
 <body>
   <div class="container">
-    <header class="hero">
-      <h1>Selamat Hari Valentine</h1>
-      <h2>Untuk bocil kesayangan akuu 🤍</h2>
-      <p class="message">
-        Selamat Hari Valentine buat bocil kesayangan akuu 🤍
-        Semangatt yaa buat menjalani hari-hari kamu. Apa pun yang kamu hadapi, aku selalu ada buat nemenin dan dukung kamu.
-        Jangan lupa buat happy terus samaaa akuu yaa, karena senyum kamu itu salah satu hal favoritku 💕
-        Hadiah ini mungkin beda dari yang lain, tapi aku harap bisa jadi pengingat kecil kalau kamu itu spesial banget buat aku.
-        Terima kasih sudah hadir dan jadi bagian penting di hidupku. Aku sayang kamu, hari ini, besok, dan seterusnya 🌹
-      </p>
+    <h1>Selamat Hari Valentine 💌</h1>
+    <h2>Untuk bocil kesayangan akuu 🤍</h2>
 
-      <div class="controls">
-        <button id="prev">◀</button>
-        <button id="next">▶</button>
-        <button id="playToggle">Play Musik</button>
-        <button id="print">Cetak / Simpan PDF</button>
-      </div>
-    </header>
+    <div class="message">
+      Selamat Hari Valentine buat bocil kesayangan akuu 🤍<br><br>
+      Semangatt yaa buat menjalani hari-hari kamu. Apa pun yang kamu hadapi,
+      aku selalu ada buat nemenin dan dukung kamu.<br><br>
+      Jangan lupa buat happy terus samaaa akuu yaa, karena senyum kamu itu
+      salah satu hal favoritku 💕<br><br>
+      Hadiah ini mungkin beda dari yang lain, tapi aku harap bisa jadi
+      pengingat kecil kalau kamu itu spesial banget buat aku.<br><br>
+      Aku sayang kamu, hari ini, besok, dan seterusnya 🌹
+    </div>
 
-    <main>
-      <section class="gallery">
-        <!-- Keterangan: gambar dibungkus <a> sehingga ketika diklik membuka file gambar (link) full-size di tab baru -->
-        <img src="IMG-20260120-WA0020.jpg" alt="Foto 1" class="active">
-        <img src="IMG-20260124-WA0006.jpg" alt="Foto 2">
-        <img src="IMG-20260129-WA0092.jpg" alt="Foto 3">
-        <img src="IMG-20260126-WA0034.jpg" alt="Foto 4">
-      </section>
+    <div class="gallery">
+      <img src="IMG-20260120-WA0020.jpg">
+      <img src="IMG-20260124-WA0006.jpg">
+      <img src="IMG-20260129-WA0092.jpg">
+      <img src="IMG-20260126-WA0034.jpg">
+    </div>
 
-      <aside class="note">
-        <h3>Catatan dari aku</h3>
-        <p>Setiap hari bersama kamu adalah hadiah. Semoga hari ini spesial, penuh tawa dan pelukan hangat. Aku sayang kamu 💖</p>
-
-        <div class="audio-block">
-          <!-- Opsi 1: gunakan file lokal song.mp3 (letakkan song.mp3 di folder yang sama).
-               Opsi 2: biarkan kosong dan gunakan YouTube embed di bawah (ganti YOUTUBE_ID). -->
-          <audio id="localAudio" src="song.mp3" preload="none"></audio>
-
-          <div class="youtube-embed">
-            <!-- Ganti YOUTUBE_ID dengan ID video YouTube romantis pilihan Anda
-                 Contoh ID (River Flows In You): "y6120QOlsfU" (hanya contoh).
-                 Jika pakai YouTube, tombol Play akan memicu pembukaan video di overlay -->
-            <button id="openYoutube">Putar di YouTube</button>
-          </div>
-        </div>
-      </aside>
-    </main>
+    <button onclick="window.open('https://www.youtube.com/watch?v=y6120QOlsfU')">
+      ▶ Putar Musik Romantis
+    </button>
 
     <footer>
-      <small>Made with ❤️ — Happy Valentine</small>
+      <p>Love you always 🤍<br>— dari Gusman</p>
     </footer>
-
-    <!-- hearts dekoratif -->
-    <div class="hearts" aria-hidden="true">
-      <div class="heart h1"></div>
-      <div class="heart h2"></div>
-      <div class="heart h3"></div>
-    </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
